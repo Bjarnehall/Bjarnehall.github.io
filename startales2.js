@@ -28,7 +28,12 @@ window.onload = function() {
         ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo').setOrigin(0.5, 0.5);
 
         // Enable keyboard input
-        cursors = this.input.keyboard.createCursorKeys();
+        cursors = this.input.keyboard.addKeys({
+            W: Phaser.Input.Keyboard.KeyCodes.W,
+            A: Phaser.Input.Keyboard.KeyCodes.A,
+            S: Phaser.Input.Keyboard.KeyCodes.S,
+            D: Phaser.Input.Keyboard.KeyCodes.D
+        });
 
         // Display the username in the top-left corner
         this.add.text(20, 20, 'Player: ' + (typeof username !== 'undefined' ? username : 'Guest'), { font: '32px Arial', fill: '#fff' });
