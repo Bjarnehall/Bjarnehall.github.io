@@ -1,0 +1,25 @@
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body{
+    /*Background*/
+    background-color: #1b1b1b;
+    /*Typo*/
+    color: #c7c7c7;
+    font-family:'Arial', sans-serif;
+}
+
+/*Typo*/
+a {
+    color: #c7c7c7;
+}
+/*Typo*/
+a:hover {
+    color: #FFF;
+}
+

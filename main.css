@@ -1,0 +1,40 @@
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body{
+    /*Background*/
+    background-color: rgb(53, 51, 193);
+    /*Typo*/
+    color: #c7c7c7;
+    font-family:'Arial', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://live.staticflickr.com/65535/53995933501_f4b7d5684b_o.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+
+
+/*Typo*/
+a {
+    color: #c7c7c7;
+}
+/*Typo*/
+a:hover {
+    color: #FFF;
+}
