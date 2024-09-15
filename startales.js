@@ -33,7 +33,7 @@ window.onload = function() {
         // Character
         ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo').setOrigin(0.5, 0.5);
         // Enable keyboard input
-        cursors = this.input.keyboard.createCursorKeys(); 
+        cursors = this.input.keyboard.createCursorKeys();
 
         // Display the username in the top-left corner
         if (typeof username !== 'undefined') {
@@ -46,6 +46,9 @@ window.onload = function() {
 
     function update() {
         // Update game elements here
+
+        // Ensure cursurs is initialized
+        if (!cursors) return
 
         // Movement speed
         var speed = 5;
