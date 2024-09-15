@@ -24,8 +24,16 @@ window.onload = function() {
 
     function create() {
         // Add game elements here
+
+        // Background img
         this.add.image(0, 0, 'sky').setOrigin(0, 0).setDisplaySize(config.width, config.height);
-        ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo').setOrigin(0.5, 0.5);
+        
+        // ufo
+        var ufoWidth = 100;
+        var ufoHeight = 100;
+        ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo')
+        .setOrigin(0.5, 0.5)
+        .setDisplaySize(ufoWidth, ufoHeight);
 
         // Enable keyboard input
         cursors = this.input.keyboard.addKeys({
@@ -39,7 +47,7 @@ window.onload = function() {
         this.add.text(20, 20, 'Player: ' + (typeof username !== 'undefined' ? username : 'Guest'), { font: '32px Arial', fill: '#fff' });
 
         // Example button to start audio context
-        var startButton = this.add.text(400, 350, 'Start Audio', { font: '32px Arial', fill: '#fff' })
+        var startButton = this.add.text(20, config-height - 50, 'Start Audio', { font: '22px Arial', fill: '#fff' })
             .setInteractive()
             .on('pointerdown', function () {
             // Start or resume AudioContext here
