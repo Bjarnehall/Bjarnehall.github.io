@@ -18,37 +18,36 @@ window.onload = function() {
 
     function preload() {
         // Load assets here
-
-        // Background
         this.load.image('sky', 'https://live.staticflickr.com/65535/53995042192_f07b3d47ae_o.png');
-        // Character
         this.load.image('ufo', 'https://bjarnehall.github.io/ufo.png');
     }
 
     function create() {
         // Add game elements here
-
-        // Background img
         this.add.image(0, 0, 'sky').setOrigin(0, 0).setDisplaySize(config.width, config.height);
-        // Character
         ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo').setOrigin(0.5, 0.5);
+
         // Enable keyboard input
         cursors = this.input.keyboard.createCursorKeys();
 
         // Display the username in the top-left corner
-        if (typeof username !== 'undefined') {
-            this.add.text(20, 20, 'Player: ' + username, { font: '32px Arial', fill: '#fff' });
-        } else {
-            this.add.text(20, 20, 'Player: Guest', { font: '32px Arial', fill: '#fff' });
-        
-        }
+        this.add.text(20, 20, 'Player: ' + (typeof username !== 'undefined' ? username : 'Guest'), { font: '32px Arial', fill: '#fff' });
+    
+        // Example button to start audio context
+        var startButton = this.add.text(400, 350, 'Start Audio', { font: '32px Arial', fill: '#fff' })
+            .setInteractive()
+            .on('pointerdown', function () {
+            // Start or resume AudioContext here
+            var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            audioContext.resume().then(() => {
+                console.log('AudioContext resumed.');
+            });
+        });
     }
 
     function update() {
-        // Update game elements here
-
-        // Ensure cursurs is initialized
-        if (!cursors) return
+        // Ensure cursors is initialized
+        if (!cursors || !cursors.W) return;
 
         // Movement speed
         var speed = 5;
