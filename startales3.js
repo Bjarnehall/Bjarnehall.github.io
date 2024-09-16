@@ -80,7 +80,7 @@ window.onload = function() {
         // // Ensure the ufo stays within the game bounds
         // ufo.x = Phaser.Math.Clamp(ufo.x, ufo.width / 2, config.width - ufo.width / 2);
         // ufo.y = Phaser.Math.Clamp(ufo.y, ufo.height / 2, config.height - ufo.height / 2);
-        ufo.x = Phaser.Math.Clamp(ufo.x, -5, config.width + 5);
-        ufo.y = Phaser.Math.Clamp(ufo.y, -5, config.height + 5);
+        ufo.x = Phaser.Math.Clamp(ufo.x, -1, config.width + 1);
+        ufo.y = Phaser.Math.Clamp(ufo.y, -1, config.height + 1);
     }
 };
