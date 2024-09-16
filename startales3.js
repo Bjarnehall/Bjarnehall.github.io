@@ -33,7 +33,7 @@ window.onload = function() {
             .setOrigin(0.5, 0.5)
             .setDisplaySize(ufoWidth, ufoHeight);
 
-        // Enable keyboard input
+        // Enable keyboard input990
         cursors = this.input.keyboard.addKeys({
             W: Phaser.Input.Keyboard.KeyCodes.W,
             A: Phaser.Input.Keyboard.KeyCodes.A,
@@ -77,8 +77,10 @@ window.onload = function() {
             ufo.x += speed;
         }
 
-        // Ensure the ufo stays within the game bounds
-        ufo.x = Phaser.Math.Clamp(ufo.x, ufo.width / 2, config.width - ufo.width / 2);
-        ufo.y = Phaser.Math.Clamp(ufo.y, ufo.height / 2, config.height - ufo.height / 2);
+        // // Ensure the ufo stays within the game bounds
+        // ufo.x = Phaser.Math.Clamp(ufo.x, ufo.width / 2, config.width - ufo.width / 2);
+        // ufo.y = Phaser.Math.Clamp(ufo.y, ufo.height / 2, config.height - ufo.height / 2);
+        ufo.x = Phaser.Math.Clamp(ufo.x, -5, config.width + 5);
+        ufo.y = Phaser.Math.Clamp(ufo.y, -5, config.height + 5);
     }
 };
