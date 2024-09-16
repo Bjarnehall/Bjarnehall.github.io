@@ -3,6 +3,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    line-height: 1.5;
 }
 
 
@@ -48,8 +49,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* width: 200px; */
-    background-color: #121212;
+    background-color: #000000;
     position: fixed;
     top: 0;
     width: 100%;
@@ -70,7 +70,17 @@ li   {
     display: inline;
 }
 
-.active {
-    background-color: #313131;
+
+.textOne {
+    width: 40%;
+    padding-top: 20px;
+    margin-left: 30%;
+    margin-top: 20px;
+    background-color: #0000004a;
+    height: 100%;
 }
 
+.textOne p {
+    padding: 5%;
+    padding-top: 0;
+}
