@@ -38,3 +38,7 @@ a {
 a:hover {
     color: #FFF;
 }
+
+h1 {
+    text-align: center;
+}
