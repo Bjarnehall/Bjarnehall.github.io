@@ -2,7 +2,7 @@ window.onload = function() {
     var config = {
         type: Phaser.AUTO,
         width: 1536,
-        height: 700,
+        height: 750,
         parent: 'game-container',
         scene: {
             preload: preload,

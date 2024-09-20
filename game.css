@@ -28,9 +28,9 @@ a:hover {
 }
 
 main {
-    margin-top: 60px
+    margin-left: 10%;
 }
 
-.game-container {
-    margin-left: 10%;
+main {
+    margin-top: 60px
 }
