@@ -27,10 +27,15 @@ a:hover {
     color: #FFF;
 }
 
-.game {
-    margin-left: 10%;
-}
 
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin-top: 60px
+}
+
+.game {
+    margin-left: 10%;
 }

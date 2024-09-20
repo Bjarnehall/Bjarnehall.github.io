@@ -63,7 +63,10 @@ h1 {
     padding-top: 0;
 }
 
-
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin-top: 60px
 }
