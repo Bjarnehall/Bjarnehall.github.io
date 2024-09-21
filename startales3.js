@@ -79,11 +79,11 @@ window.onload = function() {
         }
 
         // // Ensure the ufo stays within the game bounds
-        ufo.x = Phaser.Math.Clamp(ufo.x, ufo.width / 4, config.width - ufo.width / 4);
-        ufo.y = Phaser.Math.Clamp(ufo.y, ufo.height / 4, config.height - ufo.height / 4);
+        // ufo.x = Phaser.Math.Clamp(ufo.x, ufo.width / 4, config.width - ufo.width / 4);
+        // ufo.y = Phaser.Math.Clamp(ufo.y, ufo.height / 4, config.height - ufo.height / 4);
         //ufo.x.setSize(1500, 80);
 
-        // ufo.x = Phaser.Math.Clamp(ufo.x, -1, config.width + 1);
-        // ufo.y = Phaser.Math.Clamp(ufo.y, -1, config.height + 1);
+        ufo.x = Phaser.Math.Clamp(ufo.x, -2, config.width + 1);
+        ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
     }
 };
