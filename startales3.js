@@ -62,7 +62,7 @@ window.onload = function() {
         if (!cursors || !cursors.W) return;
 
         // Movement speed
-        var speed = 3;
+        var speed = 2;
 
         // Movement with keys
         if (cursors.W.isDown) {
@@ -79,8 +79,8 @@ window.onload = function() {
         }
 
         // // Ensure the ufo stays within the game bounds
-        ufo.x = Phaser.Math.Clamp(ufo.x, ufo.width / 2, config.width - ufo.width / 12);
-        ufo.y = Phaser.Math.Clamp(ufo.y, ufo.height / 2, config.height - ufo.height / 12);
+        ufo.x = Phaser.Math.Clamp(ufo.x, ufo.width / 1, config.width - ufo.width / 12);
+        ufo.y = Phaser.Math.Clamp(ufo.y, ufo.height / 1, config.height - ufo.height / 12);
         // ufo.x = Phaser.Math.Clamp(ufo.x, -1, config.width + 1);
         // ufo.y = Phaser.Math.Clamp(ufo.y, -1, config.height + 1);
     }
