@@ -42,18 +42,19 @@ window.onload = function() {
         });
 
         // Display the username in the top-left corner
-        this.add.text(20, 20, 'Player: ' + (typeof username !== 'undefined' ? username : 'Guest'), { font: '32px Arial', fill: '#fff' });
+        //this.add.text(20, 20, 'Player: ' + (typeof username !== 'undefined' ? username : 'Guest'), { font: '32px Arial', fill: '#fff' });
 
         // Example button to start audio context
-        var startButton = this.add.text(20, config.height - 50, 'Start Audio', { font: '22px Arial', fill: '#fff' })
-            .setInteractive()
-            .on('pointerdown', function () {
-                // Start or resume AudioContext here
-                var audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                audioContext.resume().then(() => {
-                    console.log('AudioContext resumed.');
-                });
-            });
+        //var startButton = this.add.text(20, config.height - 50, 'Start Audio', { font: '22px Arial', fill: '#fff' })
+        //    .setInteractive()
+        //    .on('pointerdown', function () {
+        //        // Start or resume AudioContext here
+        //        var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        //        audioContext.resume().then(() => {
+        //            console.log('AudioContext resumed.');
+        //        });
+        //    });
+    //}
     }
 
     function update() {

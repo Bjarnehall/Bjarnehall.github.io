@@ -1,0 +1,15 @@
+
+.player-stats {
+    background-color: #000000;
+}
+
+.player-stats p {
+    padding-right: 15px;
+    padding-left: 15px;
+    color: rgb(113, 215, 113);
+}
+
+.player-stats hr {
+    border: 2px solid rgba(17, 187, 17, 0.905);
+    margin-top: -9px;
+}
