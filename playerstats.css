@@ -6,11 +6,11 @@
 .player-stats p {
     padding-right: 15px;
     padding-left: 15px;
-    color: rgb(113, 215, 113);
-    width: 280px;
+    color: rgb(255, 255, 255);
+    width: 303px;
 }
 
 .player-stats hr {
-    border: 2px solid rgba(17, 187, 17, 0.905);
+    border: 2px solid rgba(255, 255, 255, 0.542);
     margin-top: -9px;
 }
