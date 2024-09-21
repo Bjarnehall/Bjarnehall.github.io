@@ -25,3 +25,12 @@
 li   {
     display: inline;
 }
+
+/*Typo*/
+a {
+    color: #c7c7c7;
+}
+/*Typo*/
+a:hover {
+    color: #FFF;
+}

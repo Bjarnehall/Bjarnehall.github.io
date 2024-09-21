@@ -1,6 +1,7 @@
 
 @import url("https://bjarnehall.github.io/nav.css");
 
+
 html, body {
     height: 100%;
     margin: 0;
@@ -33,21 +34,9 @@ body::before {
 
 
 
-/*Typo*/
-a {
-    color: #c7c7c7;
-}
-/*Typo*/
-a:hover {
-    color: #FFF;
-}
-
 h1 {
     text-align: center;
 }
-
-
-
 
 .textOne {
     width: 40%;
@@ -69,4 +58,32 @@ main {
     align-items: center;
     height: 100vh;
     margin-top: 60px
+}
+
+/*FORM*/
+
+.form-container {box-sizing: border-box}
+
+.form-container {
+    padding: 16px;
+}
+
+.form-container hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.registerbtn {
+   background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;   
+}
+
+.registerbtn:hover {
+  opacity:1;
 }
