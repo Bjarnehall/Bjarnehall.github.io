@@ -27,8 +27,8 @@ window.onload = function() {
         this.add.image(0, 0, 'sky').setOrigin(0, 0).setDisplaySize(config.width, config.height);
         
         // ufo
-        var ufoWidth = 80;
-        var ufoHeight = 70;
+        var ufoWidth = 100;
+        var ufoHeight = 100;
         ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo')
             .setOrigin(0.5, 0.5)
             .setDisplaySize(ufoWidth, ufoHeight);
