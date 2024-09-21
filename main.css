@@ -73,7 +73,7 @@ main {
     margin-bottom: 25px;
 }
 
-.registerbtn {
+.btn {
    background-color: #04AA6D;
   color: white;
   padding: 16px 20px;
@@ -84,6 +84,6 @@ main {
   opacity: 0.9;   
 }
 
-.registerbtn:hover {
+.btn:hover {
   opacity:1;
 }
