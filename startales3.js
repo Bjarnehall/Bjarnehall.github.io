@@ -15,11 +15,13 @@ window.onload = function() {
 
     var ufo; // Variable to store character
     var cursors; // Variable to store the cursors for input
+    var isMovingUp = false; // To track if W is pressed
 
     function preload() {
         // Load assets here
         this.load.image('sky', 'https://live.staticflickr.com/65535/53995042192_f07b3d47ae_o.png');
         this.load.image('ufo', 'https://bjarnehall.github.io/UFOUNI3.png');
+        this.load.image('ufo_up', 'https://bjarnehall.github.io/UFO2up.png');
     }
 
     function create() {
@@ -27,8 +29,8 @@ window.onload = function() {
         this.add.image(0, 0, 'sky').setOrigin(0, 0).setDisplaySize(config.width, config.height);
         
         // ufo
-        var ufoWidth = 120;
-        var ufoHeight = 120;
+        var ufoWidth = 125;
+        var ufoHeight = 125;
         ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo')
             .setOrigin(0.5, 0.5)
             .setDisplaySize(ufoWidth, ufoHeight);
@@ -41,20 +43,6 @@ window.onload = function() {
             D: Phaser.Input.Keyboard.KeyCodes.D
         });
 
-        // Display the username in the top-left corner
-        //this.add.text(20, 20, 'Player: ' + (typeof username !== 'undefined' ? username : 'Guest'), { font: '32px Arial', fill: '#fff' });
-
-        // Example button to start audio context
-        //var startButton = this.add.text(20, config.height - 50, 'Start Audio', { font: '22px Arial', fill: '#fff' })
-        //    .setInteractive()
-        //    .on('pointerdown', function () {
-        //        // Start or resume AudioContext here
-        //        var audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        //        audioContext.resume().then(() => {
-        //            console.log('AudioContext resumed.');
-        //        });
-        //    });
-    //}
     }
 
     function update() {
@@ -66,7 +54,11 @@ window.onload = function() {
 
         // Movement with keys
         if (cursors.W.isDown) {
+            ufo.setTexture('ufo_up');
             ufo.y -= speed;
+            isMovingUp = false;
+        } else {
+            isMovingUp = false;
         }
         if (cursors.S.isDown) {
             ufo.y += speed;
@@ -78,11 +70,12 @@ window.onload = function() {
             ufo.x += speed;
         }
 
-        // // Ensure the ufo stays within the game bounds
-        // ufo.x = Phaser.Math.Clamp(ufo.x, ufo.width / 4, config.width - ufo.width / 4);
-        // ufo.y = Phaser.Math.Clamp(ufo.y, ufo.height / 4, config.height - ufo.height / 4);
-        //ufo.x.setSize(1500, 80);
+        if (!isMovingUp) {
+            ufo.setTexture('ufo');
+        }
 
+
+        // // Ensure the ufo stays within the game bounds
         ufo.x = Phaser.Math.Clamp(ufo.x, -2, config.width + 1);
         ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
     }
