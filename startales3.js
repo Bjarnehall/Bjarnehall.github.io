@@ -56,7 +56,7 @@ window.onload = function() {
         if (cursors.W.isDown) {
             ufo.setTexture('ufo_up');
             ufo.y -= speed;
-            isMovingUp = false;
+            isMovingUp = true;
         } else {
             isMovingUp = false;
         }
