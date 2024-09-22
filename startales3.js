@@ -19,7 +19,7 @@ window.onload = function() {
     function preload() {
         // Load assets here
         this.load.image('sky', 'https://live.staticflickr.com/65535/53995042192_f07b3d47ae_o.png');
-        this.load.image('ufo', 'https://bjarnehall.github.io/UFOUNI2.png');
+        this.load.image('ufo', 'https://bjarnehall.github.io/UFOUNI3.png');
     }
 
     function create() {
@@ -27,8 +27,8 @@ window.onload = function() {
         this.add.image(0, 0, 'sky').setOrigin(0, 0).setDisplaySize(config.width, config.height);
         
         // ufo
-        var ufoWidth = 110;
-        var ufoHeight = 110;
+        var ufoWidth = 120;
+        var ufoHeight = 120;
         ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo')
             .setOrigin(0.5, 0.5)
             .setDisplaySize(ufoWidth, ufoHeight);
