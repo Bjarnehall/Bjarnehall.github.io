@@ -21,7 +21,7 @@ window.onload = function() {
         // Load assets here
         this.load.image('sky', 'https://live.staticflickr.com/65535/53995042192_f07b3d47ae_o.png');
         this.load.image('ufo', 'https://bjarnehall.github.io/UFOUNI3.png');
-        this.load.image('ufo_up', 'https://bjarnehall.github.io/UFO2up.png');
+        this.load.image('ufo_up', 'https://bjarnehall.github.io/UFOUNI2up.png');
     }
 
     function create() {
