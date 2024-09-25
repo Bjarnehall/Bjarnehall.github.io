@@ -47,6 +47,8 @@ window.onload = function() {
             .setOrigin(0.5, 0.5)
             .setDisplaySize(enemyWidth, enemyHeight);
 
+        setRandomDirection();
+
         // Enable keyboard input990
         cursors = this.input.keyboard.addKeys({
             W: Phaser.Input.Keyboard.KeyCodes.W,
@@ -57,7 +59,7 @@ window.onload = function() {
 
     }
 
-    function update() {
+    function update(time, delta) {
         if (gameLost) {
             return;
         }
@@ -120,6 +122,12 @@ window.onload = function() {
             this.add.text(config.width / 2, config.height / 2, "Game over", { fontSize: '64px', fill: '#ff0000' }).setOrigin(0.5);
         }
 
+        // Function to set a random direction for the enemy
+        function setRandomDirection() {
+        var angle = Phaser.Math.Between(0, 360); // Random angle in degrees
+        enemyDirection = new Phaser.Math.Vector2(Math.cos(angle), Math.sin(angle)); // Convert angle to direction
+        enemyDirection.normalize(); // Normalize to get constant speed
+        }
     }
 
 };
