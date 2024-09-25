@@ -99,8 +99,8 @@ window.onload = function() {
         enemy.y += enemyDirection.y * enemySpeed;
 
         // Ensure the enemy stays within the game bounds
-        enemy.x = Phaser.Math.Clamp(enemy.x, 0, config.width);
-        enemy.y = Phaser.Math.Clamp(enemy.y, 0, config.height);
+        enemy.x = Phaser.Math.Clamp(enemy.x, -2, config.width + 1);
+        enemy.y = Phaser.Math.Clamp(enemy.y, -2, config.height + 1);
 
         // Check if it's time to change direction (every 2 seconds)
         changeDirectionTimer += delta;
