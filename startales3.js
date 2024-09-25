@@ -91,8 +91,8 @@ window.onload = function() {
         ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
     
         var enemySpeed = 1.5;
-        enemy.x = Phaser.Math.Clamp(enemy.x, 0, config.width);
-        enemy.y = Phaser.Math.Clamp(enemy.y, 0, config.height);
+        enemy.x = Phaser.Math.Clamp(enemy.x + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.width);
+        enemy.y = Phaser.Math.Clamp(enemy.y + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.height);
 
         // check for collision between UFO and Enemy
         if (Phaser.Geom.Intersects.RectangleToRectangle(ufo.getBounds(), enemy.getBounds())) {
