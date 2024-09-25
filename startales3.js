@@ -16,6 +16,9 @@ window.onload = function() {
     var ufo; // Variable to store character
     var cursors; // Variable to store the cursors for input
     var enemy; // Variable to store enemy
+    var enemyDirection = new Phaser.Math.Vector2(0, 0); // Store enemy movement direction
+    var enemySpeed = 1.5; // Speed of enemy
+    var changeDirectionTimer = 0; // Timer to change enemy direction
     var isMovingUp = false; // To track if W is pressed
     var gameLost = false;
 
@@ -85,14 +88,31 @@ window.onload = function() {
         if (!isMovingUp) {
             ufo.setTexture('ufo');
         }
-
-        // // Ensure the ufo stays within the game bounds
+        // Ensure the ufo stays within the game bounds
         ufo.x = Phaser.Math.Clamp(ufo.x, -2, config.width + 1);
         ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
+
+        // Move enemy smoothly in current direction
+        enemy.x += enemyDirection.x * enemySpeed;
+        enemy.y += enemyDirection.y * enemySpeed;
+
+        // Ensure the enemy stays within the game bounds
+        enemy.x = Phaser.Math.Clamp(enemy.x, 0, config.width);
+        enemy.y = Phaser.Math.Clamp(enemy.y, 0, config.height);
+
+        // Check if it's time to change direction (every 2 seconds)
+        changeDirectionTimer += delta;
+        if (changeDirectionTimer > 2000) {
+            setRandomDirection();
+            changeDirectionTimer = 0; // Reset timer
+        }
+        // // Ensure the ufo stays within the game bounds
+        // ufo.x = Phaser.Math.Clamp(ufo.x, -2, config.width + 1);
+        // ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
     
-        var enemySpeed = 1.5;
-        enemy.x = Phaser.Math.Clamp(enemy.x + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.width);
-        enemy.y = Phaser.Math.Clamp(enemy.y + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.height);
+        // var enemySpeed = 1.5;
+        // enemy.x = Phaser.Math.Clamp(enemy.x + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.width);
+        // enemy.y = Phaser.Math.Clamp(enemy.y + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.height);
 
         // check for collision between UFO and Enemy
         if (Phaser.Geom.Intersects.RectangleToRectangle(ufo.getBounds(), enemy.getBounds())) {
