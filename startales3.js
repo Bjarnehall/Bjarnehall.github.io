@@ -112,9 +112,9 @@ window.onload = function() {
         // ufo.x = Phaser.Math.Clamp(ufo.x, -2, config.width + 1);
         // ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
     
-        // var enemySpeed = 1.5;
-        // enemy.x = Phaser.Math.Clamp(enemy.x + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.width);
-        // enemy.y = Phaser.Math.Clamp(enemy.y + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.height);
+        var enemySpeed = 1.5;
+        enemy.x = Phaser.Math.Clamp(enemy.x + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.width);
+        enemy.y = Phaser.Math.Clamp(enemy.y + Phaser.Math.Between(-enemySpeed, enemySpeed), 0, config.height);
 
         // check for collision between UFO and Enemy
         if (Phaser.Geom.Intersects.RectangleToRectangle(ufo.getBounds(), enemy.getBounds())) {
