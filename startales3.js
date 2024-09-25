@@ -23,7 +23,7 @@ window.onload = function() {
         this.load.image('sky', 'https://live.staticflickr.com/65535/53995042192_f07b3d47ae_o.png');
         this.load.image('ufo', 'https://bjarnehall.github.io/UFOUNI3.png');
         this.load.image('ufo_up', 'https://bjarnehall.github.io/UFOUNI2up.png');
-        this.load.image('enemy', 'https://bjarnehall.github.io/Spaceship_01_orange.png');
+        this.load.image('enemy', 'https://bjarnehall.github.io/Spaceship_01_ORANGE.png');
     }
 
     function create() {
