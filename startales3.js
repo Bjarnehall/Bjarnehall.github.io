@@ -17,6 +17,7 @@ window.onload = function() {
     var cursors; // Variable to store the cursors for input
     var enemy; // Variable to store enemy
     var isMovingUp = false; // To track if W is pressed
+    var gameLost = false;
 
     function preload() {
         // Load assets here
