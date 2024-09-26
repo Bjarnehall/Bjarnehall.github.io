@@ -42,7 +42,7 @@ window.onload = function() {
 
         var policeWidth = 120;
         var policeHeight = 120;
-        police = this.add.sprite(config.width / 2, config.height / 2, 'police')
+        police = this.add.sprite(100, 100,  'police')
             .setOrigin(0.5, 0.5)
             .setDisplaySize(policeWidth, policeHeight);
 
@@ -90,8 +90,8 @@ window.onload = function() {
         ufo.x = Phaser.Math.Clamp(ufo.x, -2, config.width + 1);
         ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
 
-        police.x = Phaser.Math.Clamp(police.x -2, config.width +1);
-        police.y = Phaser.Math.Clamp(police.y -2, config.width +1);
+        police.x = Phaser.Math.Clamp(police.x - 1, 0, config.width); // Move left
+        police.y = Phaser.Math.Clamp(police.y, 0, config.height); 
 
     }
 };
