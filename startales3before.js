@@ -42,7 +42,7 @@ window.onload = function() {
 
         var policeWidth = 120;
         var policeHeight = 120;
-        police = this.add.sprite(100, 100,  'police')
+        police = this.add.sprite(config.width * 0.7, config.height * 0.3, 'police')
             .setOrigin(0.5, 0.5)
             .setDisplaySize(policeWidth, policeHeight);
 
