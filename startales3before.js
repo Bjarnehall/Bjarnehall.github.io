@@ -45,6 +45,8 @@ window.onload = function() {
         police = this.add.sprite(config.width * 0.7, config.height * 0.3, 'police')
             .setOrigin(0.5, 0.5)
             .setDisplaySize(policeWidth, policeHeight);
+        
+        policeMoveDistance = config.width * 0.05;
 
         // Enable keyboard input990
         cursors = this.input.keyboard.addKeys({
@@ -90,8 +92,20 @@ window.onload = function() {
         ufo.x = Phaser.Math.Clamp(ufo.x, -2, config.width + 1);
         ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
 
-        police.x = Phaser.Math.Clamp(police.x - 1, 0, config.width); // Move left
-        police.y = Phaser.Math.Clamp(police.y, 0, config.height); 
+        if (movingLeft) {
+            police.x += policeMoveDistance;
+        } else {
+            police.x += policeMoveDistance;
+        }
+
+        if (police.x <=(config.width * 0.7) - policeMoveDistance) {
+            movingLeft = false;
+        } else if (police.x >= (configwidth * 0.7)) {
+            movingLeft = true;
+        }
+
+        // police.x = Phaser.Math.Clamp(police.x - 1, 0, config.width); // Move left
+        // police.y = Phaser.Math.Clamp(police.y, 0, config.height); 
 
     }
 };
