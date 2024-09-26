@@ -22,6 +22,9 @@ window.onload = function() {
         this.load.image('sky', 'https://bjarnehall.github.io/startalesintrogamemoon.png');
         this.load.image('ufo', 'https://bjarnehall.github.io/UFOUNI2cat.png');
         this.load.image('ufo_up', 'https://bjarnehall.github.io/UFOUNI2upcat.png');
+        this.load.image('police', 'https://bjrnehall.github.io/UFOUNI2catpolice.png');
+        this.load.image('police_up', 'https://bjrnehall.github.io/UFOUNI2catpoliceup.png');
+
     }
 
     function create() {
@@ -34,6 +37,12 @@ window.onload = function() {
         ufo = this.add.sprite(config.width / 2, config.height / 2, 'ufo')
             .setOrigin(0.5, 0.5)
             .setDisplaySize(ufoWidth, ufoHeight);
+
+        var policeWidth = 120;
+        var policeHeight = 120;
+        police = this.add.sprite(config.width / 2, config.height / 2, 'police')
+            .setOrigin(0.8, 0.3)
+            .setDisplaySize(policeWidth, policeHeight);
 
         // Enable keyboard input990
         cursors = this.input.keyboard.addKeys({
@@ -78,5 +87,9 @@ window.onload = function() {
         // // Ensure the ufo stays within the game bounds
         ufo.x = Phaser.Math.Clamp(ufo.x, -2, config.width + 1);
         ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
+
+        police.x = Phaser.Math.Clamp(police.x -2, config.width +1);
+        police.y = Phaser.Math.Clamp(police.y -2, config.width +1);
+
     }
 };
