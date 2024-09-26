@@ -22,10 +22,11 @@ window.onload = function() {
         this.load.image('sky', 'https://bjarnehall.github.io/startalesintrogamemoon.png');
         this.load.image('ufo', 'https://bjarnehall.github.io/UFOUNI2cat.png');
         this.load.image('ufo_up', 'https://bjarnehall.github.io/UFOUNI2upcat.png');
-        this.load.image('police', 'https://bjrnehall.github.io/UFOUNI2catpolice.png');
-        this.load.image('police_up', 'https://bjrnehall.github.io/UFOUNI2catpoliceup.png');
+        this.load.image('police', 'https://bjarnehall.github.io/UFOUNI2catpolice.png');
+        this.load.image('police_up', 'https://bjarnehall.github.io/UFOUNI2catpoliceup.png');
 
     }
+    
 
     function create() {
         // Add game elements here
