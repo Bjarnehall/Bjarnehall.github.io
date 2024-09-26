@@ -17,6 +17,8 @@ window.onload = function() {
     var police;
     var cursors; // Variable to store the cursors for input
     var isMovingUp = false; // To track if W is pressed
+    var movingLeft = true;
+    var policeMoveDistance;
 
     function preload() {
         // Load assets here
@@ -93,14 +95,14 @@ window.onload = function() {
         ufo.y = Phaser.Math.Clamp(ufo.y, -2, config.height + 1);
 
         if (movingLeft) {
-            police.x += policeMoveDistance;
+            police.x -= policeMoveDistance;
         } else {
             police.x += policeMoveDistance;
         }
 
         if (police.x <=(config.width * 0.7) - policeMoveDistance) {
             movingLeft = false;
-        } else if (police.x >= (configwidth * 0.7)) {
+        } else if (police.x >= (config.width * 0.7)) {
             movingLeft = true;
         }
 
