@@ -14,6 +14,7 @@ window.onload = function() {
     var game = new Phaser.Game(config);
 
     var ufo; // Variable to store character
+    var police;
     var cursors; // Variable to store the cursors for input
     var isMovingUp = false; // To track if W is pressed
 
@@ -26,7 +27,7 @@ window.onload = function() {
         this.load.image('police_up', 'https://bjarnehall.github.io/UFOUNI2catpoliceup.png');
 
     }
-    
+
 
     function create() {
         // Add game elements here
@@ -42,7 +43,7 @@ window.onload = function() {
         var policeWidth = 120;
         var policeHeight = 120;
         police = this.add.sprite(config.width / 2, config.height / 2, 'police')
-            .setOrigin(0.8, 0.3)
+            .setOrigin(0.5, 0.5)
             .setDisplaySize(policeWidth, policeHeight);
 
         // Enable keyboard input990
